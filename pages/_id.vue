@@ -1,9 +1,14 @@
 <template lang="pug">
-  section.container
-    img.logo(src="~assets/img/logo.png" alt="Nuxt.js Logo")
-    h1.title User
-    h2.info {{ user.name }}
-    nuxt-link.button(to="/") Users
+  b-container
+    b-row
+      b-col
+      b-col
+        img.logo(src="~assets/img/logo.png" alt="Nuxt.js Logo")
+        b-jumbotron(lead="User" :header = "user.name")
+        p
+        b-button(to="/") Back to Users
+        p
+      b-col
 </template>
 
 <script>

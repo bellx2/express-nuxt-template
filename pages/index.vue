@@ -1,10 +1,15 @@
 <template lang="pug"> 
-  section.container
-    img.logo(src="~assets/img/logo.png" alt="Nuxt.js Logo")
-    h1.title USERS
-    ul.users
-      li.user(v-for="(user, index) in users" :key="index")
-          nuxt-link(:to="{ name: 'id', params: { id: index }}") {{ user.name }}
+  b-container
+    b-row
+      b-col
+      b-col
+        img.logo(src="~assets/img/logo.png" alt="Nuxt.js Logo")
+        h1.title USERS(bootstrap)
+        b-list-group
+          b-list-group-item(:to="{ name: 'id', params: { id: index }}" v-for="(user, index) in users" :key="index")
+            | {{ user.name }}
+        p
+      b-col
 </template>
 
 <script>
